@@ -46,6 +46,7 @@ Several calculated columns were added for data consistency and deeper analysis:
 A professional dashboard was designed to provide an intuitive, visual summary of key insights and these dashboards were created from the pivot tables.
 
 * Created a line chart for monthly sales trend
+  
   KEY INSIGHTS:
   Sales show a fluctuating pattern throughout the year.
   The first quarter (Jan–Mar) had relatively steady but lower sales.
@@ -54,16 +55,19 @@ A professional dashboard was designed to provide an intuitive, visual summary of
   This seasonal trend suggests opportunities to boost promotions during mid-year and maximize revenue with campaigns during Q4.
   
 * Created a Clustered Column Chart for sales by county and year.
+  
   KEY INSIGHTS:
   Year-on-Year Growth: Sales increased from 2013 to 2014 across most countries, showing business expansion.
   Top Market: The United States contributed the highest sales overall, followed by Germany and France.
   
 * Created a Pie Chart for profit by segment and product
+  
   KEY INSIGHTS:
   The chart suggests a potential opportunity to focus on the most profitable segments and products (largest slices) to maximize strategy efficiency.
   Conversely, the smaller slices might be reviewed to see if they are worth continuing or could be improved.
 
   * Created a Bar Chart for top 5 products by sales
+    
     KEY INSIGHTS:
     Paso is the top-selling product, far ahead of the others with sales close to 4,000,000.
     VTT and Velo follow as moderate performers, while Amarilla and Montana have significantly lower sales.
