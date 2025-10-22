@@ -1,8 +1,11 @@
-# Excel-Project-On-Financial-Data
+
+
+# Excel Project on Financial Data
 
 ## Project Overview
 
-This Excel project focuses on financial data analysis and interactive dashboards to provide insights into sales, profit, and product performance across different countries, segments, and time periods. The goal is to simplify decision-making by summarizing large datasets into actionable visual reports.
+This Excel project focuses on **financial data analysis and interactive dashboards** to provide insights into sales, profit, and product performance across different countries, segments, and time periods.
+The goal is to simplify decision-making by summarizing large datasets into actionable visual reports.
 
 ---
 
@@ -14,72 +17,108 @@ The dataset includes the following key columns:
 
 ---
 
-## Data Preparation
+## 🧮 Data Preparation
 
 Several calculated columns were added for data consistency and deeper analysis:
 
-- **Profit Check:** Verified as `Profit = Sales - COGS`
-- **Sales Calculation:** `Sales = Gross Sales - Discount`
-- **Profit Difference:** `Profit Difference = Profit - Calc Profit`
-- **Concatenated Column:** `Product-Year = Product + " " + Year` — for easier cross-reference in pivot tables.
+* **Profit Check:** Verified as `Profit = Sales - COGS`
+* **Sales Calculation:** `Sales = Gross Sales - Discount`
+* **Profit Difference:** `Profit Difference = Profit - Calc Profit`
+* **Concatenated Column:** `Product-Year = Product + " " + Year` — for easier cross-reference in pivot tables.
 
 ---
 
 ## Pivot Tables Created
 
-1. **Sales by Country and Year**
-   Provides a breakdown of total sales per country across different years.
-
-2. **Profit by Segment and Product**
-   Displays profit performance segmented by business segment and product type.
-
-3. **Monthly Sales Trend**
-   Tracks the sales evolution over time (by Month Number and Month Name).
-
-4. **Top 5 Products by Sales**
-   Highlights the highest-performing products in terms of total sales.
+1. **Sales by Country and Year** – Breakdown of total sales per country across years.
+2. **Profit by Segment and Product** – Profit performance segmented by business segment and product type.
+3. **Monthly Sales Trend** – Tracks sales evolution over time (Month Number and Month Name).
+4. **Top 5 Products by Sales** – Highlights the highest-performing products in terms of total sales.
 
 ---
 
-## Dashboards and Key Takeaways
+## Dashboards and Key Insights
 
-A professional dashboard was designed to provide an intuitive, visual summary of key insights and these dashboards were created from the pivot tables.
+### 1. Line Chart – Monthly Sales Trend
 
-* Created a line chart for monthly sales trend
-  
-  KEY INSIGHTS:
-  Sales show a fluctuating pattern throughout the year.
-  The first quarter (Jan–Mar) had relatively steady but lower sales.
-  A dip is noticeable mid-year (Jun–Aug), indicating weaker performance in summer months.
-  Sales peak in November and December, showing strong year-end/holiday demand.
-  This seasonal trend suggests opportunities to boost promotions during mid-year and maximize revenue with campaigns during Q4.
-  
-* Created a Clustered Column Chart for sales by county and year.
-  
-  KEY INSIGHTS:
-  Year-on-Year Growth: Sales increased from 2013 to 2014 across most countries, showing business expansion.
-  Top Market: The United States contributed the highest sales overall, followed by Germany and France.
-  
-* Created a Pie Chart for profit by segment and product
-  
-  KEY INSIGHTS:
-  The chart suggests a potential opportunity to focus on the most profitable segments and products (largest slices) to maximize strategy efficiency.
-  Conversely, the smaller slices might be reviewed to see if they are worth continuing or could be improved.
+**Insights:**
 
-  * Created a Bar Chart for top 5 products by sales
-    
-    KEY INSIGHTS:
-    Paso is the top-selling product, far ahead of the others with sales close to 4,000,000.
-    VTT and Velo follow as moderate performers, while Amarilla and Montana have significantly lower sales.
-    Focus should be on boosting top products and evaluating underperformers for improvement.
+* Sales fluctuate throughout the year.
+* Q1 (Jan–Mar) shows steady but lower sales.
+* Mid-year (Jun–Aug) dips slightly.
+* November and December peak — strong holiday demand.
+* Suggests promoting during mid-year and maximizing Q4 campaigns.
 
 ---
 
-## 🎯 How to Use
+### 2. Clustered Column Chart – Sales by Country and Year
+
+**Insights:**
+
+* Year-on-Year Growth from 2013 to 2014 across most countries.
+* **Top Market:** United States leads, followed by Germany and France.
+* Indicates successful international expansion.
+
+---
+
+### 3. Pie Chart – Profit by Segment and Product
+
+**Insights:**
+
+* Largest slices = most profitable segments/products.
+* Smaller slices indicate areas to improve or reconsider continuing.
+
+---
+
+### 4. Bar Chart – Top 5 Products by Sales
+
+**Insights:**
+
+* **Paseo** is the top-selling product (~4,000,000).
+* **VTT** and **Velo** follow as moderate performers.
+* **Amarilla** and **Montana** show lower performance — potential areas for marketing or product improvement.
+
+---
+
+## Formulas Summary
+
+| Metric             | Value       |
+| ------------------ | ----------- |
+| **Total Sales**    | 118726125.8 |
+| **Average Profit** | 27460.8     |
+| **Max Sales**      | 1159200     |
+| **Min Sales**      | 1655.08     |
+
+---
+
+## VLOOKUP Implementation
+
+A **VLOOKUP** formula was used to fetch the **Sale Price** based on the *Product-Year* lookup value.
+This demonstrated how to efficiently reference specific product-year combinations from a sales dataset.
+
+| Lookup Value     | Sale Price |
+| ---------------- | ---------- |
+| Paseo - 2013     | 15         |
+| Paseo - 2014     | 350        |
+| Carretera - 2014 | 7          |
+| VTT - 2014       | 300        |
+
+**Formula Used:**
+
+```excel
+=VLOOKUP(A2, LookupTable!A:B, 2, FALSE)
+```
+
+**Purpose:**
+To automatically retrieve sale prices corresponding to specific product-year entries, ensuring data accuracy and eliminating manual lookup errors.
+
+---
+
+## How to Use
 
 1. Download the Excel file.
-2. Navigate through the Dashboard tab.
-3. Use the interactive slicers to filter the data.
-4. Explore pivot tables directly for detailed analysis.
-
+2. Navigate to the **Dashboard** tab.
+3. Use the interactive slicers to filter data.
+4. Explore pivot tables directly for deeper insights.
+5. Review the **VLOOKUP example** in the “Formulas” sheet for reference.
 
