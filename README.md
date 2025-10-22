@@ -17,7 +17,7 @@ The dataset includes the following key columns:
 
 ---
 
-## 🧮 Data Preparation
+## Data Preparation
 
 Several calculated columns were added for data consistency and deeper analysis:
 
@@ -109,11 +109,6 @@ This demonstrated how to efficiently reference specific product-year combination
 =VLOOKUP(A2, LookupTable!A:B, 2, FALSE)
 ```
 
-**Purpose:**
-To automatically retrieve sale prices corresponding to specific product-year entries, ensuring data accuracy and eliminating manual lookup errors.
-
----
-
 ## How to Use
 
 1. Download the Excel file.
@@ -121,4 +116,3 @@ To automatically retrieve sale prices corresponding to specific product-year ent
 3. Use the interactive slicers to filter data.
 4. Explore pivot tables directly for deeper insights.
 5. Review the **VLOOKUP example** in the “Formulas” sheet for reference.
-
